@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/IChat/static/css/main.e6c13ad2.css",
+    "main.js": "/IChat/static/js/main.87b1b3f9.js",
+    "static/js/787.d4aba7ab.chunk.js": "/IChat/static/js/787.d4aba7ab.chunk.js",
+    "index.html": "/IChat/index.html",
+    "main.e6c13ad2.css.map": "/IChat/static/css/main.e6c13ad2.css.map",
+    "main.87b1b3f9.js.map": "/IChat/static/js/main.87b1b3f9.js.map",
+    "787.d4aba7ab.chunk.js.map": "/IChat/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.87b1b3f9.js"
+  ]
+}
