@@ -14,7 +14,8 @@ const Message = (props) => {
         const response = await fetch("https://ichat-z2u6.onrender.com/fetchChatSender",{
             method:"POST",
             headers:{
-                "Content-type": "application/json"
+                "Content-type": "application/json",
+                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify({ senderEmail, recieverEmail })
         })
@@ -35,7 +36,8 @@ const Message = (props) => {
         const response = await fetch("https://ichat-z2u6.onrender.com/fetchChat", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify({ senderEmail, recieverEmail })
         })
@@ -61,7 +63,8 @@ const Message = (props) => {
         const response = await fetch("https://ichat-z2u6.onrender.com/addChat",{
             method:"POST",
             headers:{
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                'Access-Control-Allow-Origin': '*'
             },
             body:JSON.stringify({Message:message,senderEmail,recieverEmail})
         })

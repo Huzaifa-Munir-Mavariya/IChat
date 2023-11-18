@@ -5,19 +5,10 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = (props) => {
     const Navigate = useNavigate();
 
-    const onLogin = () => {
-        Navigate("/login");
-
-    }
-
     const onLogout = () => {
         localStorage.clear("email");
         props.setLoggedin(false);
         Navigate("/login")
-    }
-
-    const onSignup = () => {
-        Navigate("/signup")
     }
 
     return (
@@ -35,11 +26,11 @@ const Navbar = (props) => {
                             </li>    
                         </ul>
 
-                        {props.loggedin && <button onClick={onLogin} className="btn btn-success mx-1" type="submit">{localStorage.getItem("email")}</button>}
+                        {props.loggedin && <Link to="/login" className="btn btn-success mx-1" type="submit">{localStorage.getItem("email")}</Link>}
 
                         {!props.loggedin ? <form className="d-flex">
-                            <button onClick={onLogin} className="btn btn-success mx-1" type="submit">Login</button>
-                            <button onClick={onSignup} className="btn btn-success mx-1" type="submit">Signup</button>
+                            <Link to="/login" className="btn btn-success mx-1" type="submit">Login</Link>
+                            <Link to="/signup" className="btn btn-success mx-1" type="submit">Signup</Link>
                         </form>: <button onClick={onLogout} className="btn btn-success mx-1" type="submit">Logout</button>}
                     </div>
                 </div>
